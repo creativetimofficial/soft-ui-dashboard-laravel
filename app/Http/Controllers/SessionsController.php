@@ -25,8 +25,10 @@ class SessionsController extends Controller
             session()->regenerate();
             return redirect('dashboard')->with(['success'=>'You are logged in.']);
         }
+        else{
 
-        return back()->withErrors(['email'=>'Email or password invalid.']);
+            return back()->withErrors(['email'=>'Email or password invalid.']);
+        }
     }
     
     public function destroy()

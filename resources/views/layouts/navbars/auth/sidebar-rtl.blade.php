@@ -186,10 +186,10 @@
         <div class="docs-info">
           <h6 class="text-white up mb-0 text-end">تحتاج مساعدة?</h6>
           <p class="text-xs font-weight-bold text-end">يرجى التحقق من مستنداتنا</p>
-          <a href="https://www.creative-tim.com/learning-lab/bootstrap/license/soft-ui-dashboard" target="_blank" class="btn btn-white btn-sm w-100 mb-0">توثيق</a>
+          <a href="/documentation/getting-started/overview.html" target="_blank" class="btn btn-white btn-sm w-100 mb-0">توثيق</a>
         </div>
       </div>
     </div>
-    <a class="btn bg-gradient-primary mt-4 w-100" href="https://www.creative-tim.com/product/soft-ui-dashboard-pro?ref=sidebarfree" type="button">Upgrade to pro</a>
+    <a class="btn bg-gradient-primary mt-4 w-100" href="https://www.creative-tim.com/product/soft-ui-dashboard-pro-laravel" target="_blank" type="button">Upgrade to pro</a>
   </div>
 </aside>

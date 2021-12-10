@@ -10,7 +10,7 @@
                      @if ($isDemoNotification == true)
                         <div class="mt-3  alert alert-primary alert-dismissible fade show" role="alert">
                             <span class="alert-text text-white">
-                            You are in a demo version, you can't update the profile.</span>
+                            You are in a demo version, you can't recover your password.</span>
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                                 <i class="fa fa-close" aria-hidden="true"></i>
                             </button>

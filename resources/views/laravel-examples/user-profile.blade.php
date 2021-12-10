@@ -105,6 +105,15 @@
             <div class="card-body pt-4 p-3">
                 <form action="/user-profile" method="POST" role="form text-left">
                     @csrf
+                    @if ($isDemoNotification == true)
+                        <div class="mt-3  alert alert-primary alert-dismissible fade show" role="alert">
+                            <span class="alert-text text-white">
+                            You are in a demo version, you can't change the email address.</span>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                                <i class="fa fa-close" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    @endif
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
