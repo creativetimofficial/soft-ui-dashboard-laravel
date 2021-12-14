@@ -1,66 +1,464 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# [Soft UI Dashboard PRO Laravel](https://soft-ui-dashboard-laravel.creative-tim.com/login)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![version](https://img.shields.io/badge/version-1.0.0-blue.svg) 
+![license](https://img.shields.io/badge/license-MIT-blue.svg)
+[![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/soft-ui-dashboard-laravel.svg)](https://github.com/creativetimofficial/soft-ui-dashboard-laravel/issues?q=is%3Aopen+is%3Aissue) 
+[![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/soft-ui-dashboard-laravel.svg)](https://github.com/creativetimofficial/soft-ui-dashboard-laravel/issues?q=is%3Aissue+is%3Aclosed)
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+*Frontend version*: Soft UI Dashboard v1.0.0. More info at https://www.creative-tim.com/product/soft-ui-dashboard-laravel
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/soft-ui-design-system-laravel/Dashboard.png?raw=true" width="100%" />](https://soft-ui-dashboard-laravel.creative-tim.com/dashboard)
+  
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Free Frontend Web App for Laravel with Livewire & Alpine.js
+What happens when you combine Soft UI, one of the hottest design trends right now, and Laravel?  We've partnered with [UPDIVISION](https://updivision.com/) to create the ultimate design & development toolbox. 
 
-## Learning Laravel
+Soft UI Dashboard Laravel comes with dozens of handcrafted UI elements tailored for Bootstrap 5 and an out of the box Laravel backend.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## What am I getting?
+You're getting a multi-purpose tool for building complex apps.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Soft UI Dashboard PRO Laravel at a glance:
+* 70 handcrafted UI components. From buttons and inputs to navbars and cards, everything is designed to create visually cohesive interfaces.  
+* 7 example pages to get you started
+* fully-functional authentication system, register and user profile editing features built with Laravel
+* Documentation for each component so you can get started fast
 
-## Laravel Sponsors
+## Free for personal and commercial projects
+Whether you're working on a side project or delivering to a client, we've got you covered. Soft UI Dashboard Laravel is released under MIT license, so you can use it both for personal and commercial projects for free. All you need to do is start coding. 
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+## Detailed documentation and example pages
+We also included detailed documentation for every component and feature so you can follow along. The pre-built example pages give you a quick glimpse of what Soft UI Dashboard Laravel has to offer so you can get started in no time. 
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-- **[Romega Software](https://romegasoftware.com)**
 
-## Contributing
+## Table of Contents
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* [Prerequisites](#prerequisites)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Versions](#versions)
+* [Demo](#demo)
+* [Documentation](#documentation)
+* [Login](#login)
+* [Register](#register)
+* [Forgot Password](#forgot-password)
+* [Reset Password](#reset-password)
+* [User Profile](#user-profile)
+* [Dashboard](#dashboard)
+* [File Structure](#file-structure)
+* [Browser Support](#browser-support)
+* [Reporting Issues](#reporting-issues)
+* [Licensing](#licensing)
+* [Useful Links](#useful-links)
+* [Social Media](#social-media)
+* [Credits](#credits)
 
-## Code of Conduct
+## Prerequisites
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+If you don't already have an Apache local environment with PHP and MySQL, use one of the following links:
 
-## Security Vulnerabilities
+ - Windows: https://updivision.com/blog/post/beginner-s-guide-to-setting-up-your-local-development-environment-on-windows
+ - Linux: https://howtoubuntu.org/how-to-install-lamp-on-ubuntu
+ - Mac: https://wpshout.com/quick-guides/how-to-install-mamp-on-your-mac/
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Also, you will need to install Composer: https://getcomposer.org/doc/00-intro.md   
+And Laravel: https://laravel.com/docs/8.x/installation
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Installation
+
+1. Unzip the downloaded archive
+2. Copy and paste **soft-ui-dashboard-laravel-master** folder in your **projects** folder. Rename the folder to your project's name
+3. In your terminal run `composer install`
+4. Copy `.env.example` to `.env` and updated the configurations (mainly the database configuration)
+5. In your terminal run `php artisan key:generate`
+6. Run `php artisan migrate --seed` to create the database tables and seed the roles and users tables
+7. Run `php artisan storage:link` to create the storage symlink (if you are using **Vagrant** with **Homestead** for development, remember to ssh into your virtual machine and run the command from there).
+
+## Usage
+Register a user or login with default user **admin@softui.com** and password **secret** from your database and start testing (make sure to run the migrations and seeders for these credentials to be available).
+
+Besides the dashboard, the auth pages, the billing and table pages, there is also has an edit profile page. All the necessary files are installed out of the box and all the needed routes are added to `routes/web.php`. Keep in mind that all of the features can be viewed once you login using the credentials provided or by registering your own user. 
+
+## Versions
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://demos.creative-tim.com/argon-dashboard-pro/pages/dashboards/dashboard.html?ref=sudl-readme)
+[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/laravel_logo.png?raw=true" width="60" height="60" />](https://argon-dashboard-pro-laravel.creative-tim.com/?ref=sudl-readme)
+
+| HTML | Laravel |
+| --- | --- |
+| [![HTML](https://github.com/creativetimofficial/public-assets/blob/master/soft-ui-design-system-laravel/soft-ui-html.png)](https://www.creative-tim.com/product/soft-ui-dashboard) | [![Laravel](https://github.com/creativetimofficial/public-assets/blob/master/soft-ui-design-system-laravel/Dashboard.png)](https://www.creative-tim.com/product/soft-ui-dashboard-laravel)  | 
+
+## Demo
+| Register | Login | Dashboard |
+| --- | --- | ---  |
+| [<img src="https://github.com/creativetimofficial/public-assets/blob/master/soft-ui-design-system-laravel/Register.png" width="322" />](https://soft-ui-dashboard-laravel.creative-tim.com/sign-up) | [<img src="https://github.com/creativetimofficial/public-assets/blob/master/soft-ui-design-system-laravel/Login.png?raw=true" width="322" />](https://soft-ui-dashboard-laravel.creative-tim.com/login)  | [<img src="https://github.com/creativetimofficial/public-assets/blob/master/soft-ui-design-system-laravel/Dashboard.png?raw=true" width="322" />](https://soft-ui-dashboard-laravel.creative-tim.com/dashboard)
+
+| Forgot Password Page | Reset Password Page | Profile Page  |
+| --- | --- | ---  |
+| [<img src="https://github.com/creativetimofficial/public-assets/blob/master/soft-ui-design-system-laravel/Forgot-password.png" width="320" />](https://soft-ui-dashboard-laravel.creative-tim.com/login/forgot-password)  | [<img src="https://github.com/creativetimofficial/public-assets/blob/master/soft-ui-design-system-laravel/Login.png" width="312" />](https://soft-ui-dashboard-laravel.creative-tim.com/) | [<img src="https://github.com/creativetimofficial/public-assets/blob/master/soft-ui-design-system-laravel/Profile.png" width="330" />](https://soft-ui-dashboard-laravel.creative-tim.com/laravel-user-profile)
+[View More](https://soft-ui-dashboard-laravel.creative-tim.com/dashboard)
+
+## Documentation
+The documentation for the Soft UI Dashboard Laravel is hosted at our [website](https://soft-ui-dashboard-laravel.creative-tim.com/documentation/getting-started/overview.html).
+
+### Login
+If you are not logged in you can only access this page or the Sign Up page. The default url takes you to the login page where you use the default credentials **admin@softui.com** with the password **secret**. Logging in is possible only with already existing credentials. For this to work you should have run the migrations.
+
+The `App\Http\Controllers\SessionController` handles the logging in of an existing user.
+
+```
+       public function store()
+    {
+        $attributes = request()->validate([
+            'email'=>'required|email',
+            'password'=>'required' 
+        ]);
+
+        if(Auth::attempt($attributes))
+        {
+            session()->regenerate();
+            return redirect('dashboard');
+        }
+        else{
+
+            return back();
+        }
+    }
+```
+
+### Register
+You can register as a user by filling in the name, email, role and password for your account. For your role you can choose between the Admin, Creator and Member. It is important to know that an admin user has access to all the pages and actions, can delete, add and edit another users, other roles, items, tags or categories; a creator user has acces to category, tag and item managemen, but can not add, edit or delete other users; a member user has access to the item management but can not take any action. You can do this by accessing the sign up page from the "**Sign Up**" button in the top navbar or by clicking the "**Sign Up**" button from the bottom of the log in form. Another simple way is adding **/register** in the url.
+
+The `App\Http\Controllers\RegisterController` handles the registration of a new user.
+
+```
+    public function store()
+    {
+        $attributes = request()->validate([
+            'name' => ['required', 'max:50'],
+            'email' => ['required', 'email', 'max:50', Rule::unique('users', 'email')],
+            'password' => ['required', 'min:5', 'max:20'],
+            'agreement' => ['accepted']
+        ]);
+        $attributes['password'] = bcrypt($attributes['password'] );
+
+        session()->flash('success', 'Your account has been created.');
+        $user = User::create($attributes);
+        Auth::login($user); 
+        return redirect('/dashboard');
+    }
+```
+
+### Forgot Password
+If a user forgets the account's password it is possible to reset the password. For this the user should click on the "**here**" under the login form or add **/login/forgot-password** in the url.
+
+The `App\Http\Controllers\ResetController` takes care of sending an email to the user where he can reset the password afterwards.
+
+```
+    public function sendEmail(Request $request)
+    {
+        $request->validate(['email' => 'required|email']);
+
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
+
+        return $status === Password::RESET_LINK_SENT
+                    ? back()->with(['status' => __($status)])
+                    : back()->withErrors(['email' => __($status)]);
+    }
+```
+
+### Reset Password
+The user who forgot the password gets an email on the account's email address. The user can access the reset password page by clicking the button found in the email. The link for resetting the password is available for 12 hours. The user must add the new password and confirm the password for his password to be updated. The user is redirected to the login page.
+
+The `App\Http\Controllers\ChangePasswordController` helps the user reset the password.
+
+```
+    public function changePassword(Request $request)
+    {
+        
+        $request->validate([
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:8|confirmed',
+        ]);
+    
+        $status = Password::reset(
+            $request->only('email', 'password', 'password_confirmation', 'token'),
+            function ($user, $password) {
+                $user->forceFill([
+                    'password' => Hash::make($password)
+                ])->setRememberToken(Str::random(60));
+    
+                $user->save();
+    
+                event(new PasswordReset($user));
+            }
+        );
+    
+        return $status === Password::PASSWORD_RESET
+                    ? redirect('/login')->with('status', __($status))
+                    : back()->withErrors(['email' => [__($status)]]);
+    }
+```
+
+### My Profile
+The profile can be accessed by a logged in user by clicking "**User Profile**" from the sidebar or adding **/user-profile** in the url. The user can add information like birthday, gender, phone number, location, language  or skills.
+
+The `App\Http\Controllers\InfoUserController` handles the user's profile information.
+
+```
+    public function store(Request $request)
+    {
+
+        $attributes = request()->validate([
+            'name' => ['required', 'max:50'],
+            'email' => ['required', 'email', 'max:50', Rule::unique('users')->ignore(Auth::user()->id)],
+            'phone'     => ['max:50'],
+            'location' => ['max:70'],
+            'about_me'    => ['max:150'],
+            'email' => ['required', 'email', 'max:50', Rule::unique('users')->ignore(Auth::user()->id)],
+        ]);
+        
+        User::where('id',Auth::user()->id)
+        ->update([
+            'name'    => $attributes['name'],
+            'email' => $attribute['email'],
+            'phone'     => $attributes['phone'],
+            'location' => $attributes['location'],
+            'about_me'    => $attributes["about_me"],
+        ]);
+
+        return redirect('/user-profile');
+    }
+```
+
+### Dashboard
+You can access the dashboard either by using the "**Dashboard**" link in the left sidebar or by adding **/dashboard** in the url after logging in. 
+
+## File Structure
+```
+app
+├── Console
+│   └── Kernel.php
+├── Exceptions
+│   └── Handler.php
+├── Http
+│   ├── Controllers
+│   │   └── ChangePasswordController.php
+│   │   └──Controller.php
+│   │   └──HomeController.php
+│   │   └──InfoUserController.php
+│   │   └──RegisterController.php
+│   │   └──ResetController.php
+│   │   └──SessionController.php
+│   ├── Kernel.php
+│   └── Middleware
+│       ├── Authenticate.php
+│       ├── EncryptCookies.php
+│       ├── PreventRequestsDuringMaintenance.php
+│       ├── RedirectIfAuthenticated.php
+│       ├── TrimStrings.php
+│       ├── TrustHosts.php
+│       ├── TrustProxies.php
+│       └── VerifyCsrfToken.php
+├── Models
+│   └── User.php
+├── Policies
+│   └── UsersPolicy.php
+├── Providers
+│   ├── AppServiceProvider.php
+│   ├── AuthServiceProvider.php
+│   ├── BroadcastServiceProvider.php
+│   ├── EventServiceProvider.php
+│   └── RouteServiceProvider.php
+config
+├── app.php
+├── auth.php
+├── broadcasting.php
+├── cache.php
+├── cors.php
+├── database.php
+├── filesystems.php
+├── hashing.php
+├── logging.php
+├── mail.php
+├── queue.php
+├── sanctum.php
+├── services.php
+├── session.php
+├── view.php
+|       
+database
+|   ├──factories
+|   |       UserFactory.php
+|   |       
+|   ├──migrations
+|   |       2014_10_12_000000_create_users_table.php
+|   |       2014_10_12_100000_create_password_resets_table.php
+|   |       2019_08_19_000000_create_failed_jobs_table.php
+|   |       2019_12_14_000001_create_personal_access_tokens_table.php
+|   |       
+|   └──seeds
+|           DatabaseSeeder.php
+|           UserSeeder.php
+|           
++---public
+|   |   .htaccess
+|   |   favicon.ico
+|   |   index.php
+|   |   
+|   +---css
+|   |       app.css
+|   |       soft-ui-dashboard.css
+|   +---js
+|   |       app.js
+|   |       
+|   +---assets
+|   |       demo.css
+|   |       docs-soft.css
+|   |       docs.js
+|   |
+|   |   +---css
+|   |   |   |   nucleo-icons.css
+|   |   |   |   nucleo-svg.css
+|   |   |   |   soft-ui-dashboard.css
+|   |   |   |   soft-ui-dashboard.css.map
+|   |   |   └── soft-ui-dashboard.min.css
+|   |   |                                 
+|   +---+---js
+|           |   soft-ui--dashboard.js
+|           |   soft-ui--dashboard.js.map
+|           |   soft-ui--dashboard.min.js
+|           |   
+|           +---core
+|                   bootstrap.bundle.min.js
+|                   bootstrap.min.js
+|                   popper.min.js
+|                    
++---resources
+|   +---lang
+|   |   \---en
+|   |           auth.php
+|   |           pagination.php
+|   |           passwords.php
+|   |           validation.php
+|   |           
+|   \---views
+|       |                 
+|       +---components
+|       |       fixed-plugins.blade.php
+|       |      
+|       +---laravel-example
+|       |        user-management.blade.php
+|       |        user-profile.blade.php
+|       |      
+|       +---layouts
+|       |   |   
+|       |   +---footers
+|       |   |   |
+|       |   |   +--auth
+|       |   |   |     footer.blade.php
+|       |   |   +--guest
+|       |   |         footer.blade.php
+|       |   |
+|       |   +---navbars
+|       |       |  app.blade.php
+|       |       |
+|       |       +--auth
+|       |       |     nav-rtl.blade.php
+|       |       |     nav.blade.php
+|       |       |     sidebar-rtl.blade.php
+|       |       |     sidebar.blade.php
+|       |       +--guest
+|       |       |     nav.blade.php
+|       |       |     
+|       |       +--user_type
+|       |           auth.blade.php
+|       |           guest.blade.php
+|       |           
+|       +---session
+|       |   |   login-session.blade.php
+|       |   |   register.blade.php
+|       |   |   
+|       |   +---reset-password
+|       |           resetPassword.blade.php
+|       |           sendEmail.blade.php
+|       |       
+|       billing.blade.php
+|       dashboard.blade.php
+|       profile.blade.php
+|       rtl.blade.php
+|       static-sign-in.blade.php
+|       static-sign-up.blade.php
+|       tables.blade.php
+|       virtual-reality.blade.php
+|                      
++---routes
+|       api.php
+|       channels.php
+|       console.php
+|       web.php
+```
+
+## Browser Support
+At present, we officially aim to support the last two versions of the following browsers:
+
+<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
+
+## Reporting Issues
+We use GitHub Issues as the official bug tracker for the Soft UI Dashboard. Here are some advices for our users that want to report an issue:
+
+1. Make sure that you are using the latest version of the Soft UI Dashboard. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/product/soft-ui-dashboard-pro-laravel?ref=readme-sudpl).
+2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
+3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
+
+## Licensing
+- Copyright 2021 [Creative Tim](https://www.creative-tim.com?ref=readme-sudpl)
+- Creative Tim [license](https://www.creative-tim.com/license?ref=readme-sudpl)
+
+## Useful Links
+- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
+- [Affiliate Program](https://www.creative-tim.com/affiliates/new) (earn money)
+- [Blog Creative Tim](http://blog.creative-tim.com/)
+- [Free Products](https://www.creative-tim.com/bootstrap-themes/free) from Creative Tim
+- [Premium Products](https://www.creative-tim.com/bootstrap-themes/premium?ref=sudpl-readme) from Creative Tim
+- [React Products](https://www.creative-tim.com/bootstrap-themes/react-themes?ref=sudpl-readme) from Creative Tim
+- [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes?ref=sudpl-readme) from Creative Tim
+- [More products](https://www.creative-tim.com/bootstrap-themes?ref=sudpl-readme) from Creative Tim
+- Check our Bundles [here](https://www.creative-tim.com/bundles??ref=sudpl-readme)
+
+### Social Media
+
+### Creative Tim
+Twitter: <https://twitter.com/CreativeTim?ref=sudpl-readme>
+
+Facebook: <https://www.facebook.com/CreativeTim?ref=sudpl-readme>
+
+Dribbble: <https://dribbble.com/creativetim?ref=sudpl-readme>
+
+Instagram: <https://www.instagram.com/CreativeTimOfficial?ref=sudpl-readme>
+
+### Updivision:
+
+Twitter: <https://twitter.com/updivision?ref=sudpl-readme>
+
+Facebook: <https://www.facebook.com/updivision?ref=sudpl-readme>
+
+Linkedin: <https://www.linkedin.com/company/updivision?ref=sudpl-readme>
+
+Updivision Blog: <https://updivision.com/blog/?ref=sudpl-readme>
+
+## Credits
+
+- [Creative Tim](https://creative-tim.com/?ref=sudl-readme)
+- [UPDIVISION](https://updivision.com)
+
+
+
+
+
+
