@@ -569,9 +569,11 @@
           <hr class="ct-docs-hr">
           <p>You can do this by accessing the sign up page from the <b>Sign Up</b> button in the top navbar or by clicking the <b>Sign Up</b> button from the bottom of the log in form or if you are logged in from the <b>Sign Up</b> button from the sidebar. Another simple way is adding <code>/sign-up</code> in the url.</p>
           <p>The <code>App/Http/Controllers/RegisterController.php</code> handles the registration of a new user.</p>
-          <div>
-              <pre>
-              <code>
+          <div class="position-relative">
+            <div class="bd-clipboard"><span class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard">Copy</span></div>
+                <figure class="highlight">
+                    <pre class=" language-html">
+                        <code class=" language-html" data-lang="html">
                 public function store()
                 {
                     $attributes = request()->validate([
@@ -590,6 +592,7 @@
                 }
               </code>
               </pre>
+              </figure>>
           </div>
           <div>
               <p>The data entered by the user are checked before being added in the database and creating an account.</p>
@@ -638,10 +641,6 @@
 <script src="https://demos.creative-tim.com/argon-dashboard-pro/assets/vendor/jquery/dist/jquery.min.js" type="text/javascript"></script>
 <script src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/js/core/popper.min.js" type="text/javascript"></script>
 <script src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-<script src="" type="text/javascript"></script>
-<script src="" type="text/javascript"></script>
-<script src="" type="text/javascript"></script>
-<script src="" type="text/javascript"></script>
 <script src="https://demos.creative-tim.com/argon-dashboard-pro/assets/vendor/prismjs/prism.js" type="text/javascript"></script>
 <script src="https://demos.creative-tim.com/argon-design-system-pro/assets/demo/docs.min.js" type="text/javascript"></script>
 <script src="https://demos.creative-tim.com/argon-design-system-pro/assets/demo/vendor/holder.min.js" type="text/javascript"></script>

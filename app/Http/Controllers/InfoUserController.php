@@ -13,8 +13,7 @@ class InfoUserController extends Controller
 
     public function create()
     {
-        $isDemoNotification = false;
-        return view('laravel-examples/user-profile')->with('isDemoNotification',$isDemoNotification);
+        return view('laravel-examples/user-profile');
     }
 
     public function store(Request $request)
@@ -31,8 +30,7 @@ class InfoUserController extends Controller
         {
             if(env('IS_DEMO') && Auth::user()->id == 1)
             {
-                $isDemoNotification = true;
-                return View::make('laravel-examples/user-profile')->with('isDemoNotification',$isDemoNotification);
+                return redirect()->back()->withErrors(['msg2' => 'You are in a demo version, you can\'t change the email address.']);
                 
             }
             
@@ -54,6 +52,6 @@ class InfoUserController extends Controller
         ]);
 
 
-        return redirect('/user-profile');
+        return redirect('/user-profile')->with('success','Profile updated successfully');
     }
 }

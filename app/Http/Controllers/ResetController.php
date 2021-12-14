@@ -10,8 +10,7 @@ class ResetController extends Controller
 {
     public function create()
     {
-        $isDemoNotification = false;
-        return view('session/reset-password/sendEmail')->with('isDemoNotification',$isDemoNotification);
+        return view('session/reset-password/sendEmail');
         
     }
 
@@ -19,8 +18,7 @@ class ResetController extends Controller
     {
         if(env('IS_DEMO'))
         {
-            $isDemoNotification = true;
-            return View::make('session/reset-password/sendEmail')->with('isDemoNotification',$isDemoNotification);
+            return redirect()->back()->withErrors(['msg2' => 'You are in a demo version, you can\'t recover your password.']);
         }
         else{
             $request->validate(['email' => 'required|email']);
@@ -30,7 +28,7 @@ class ResetController extends Controller
             );
 
             return $status === Password::RESET_LINK_SENT
-                        ? back()->with(['status' => __($status)])
+                        ? back()->with(['success' => __($status)])
                         : back()->withErrors(['email' => __($status)]);
         }
     }
