@@ -7,17 +7,18 @@
     "require": {
         "php": "^7.3|^8.0",
         "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^8.65",
-        "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5"
+        "guzzlehttp/guzzle": "^7.4",
+        "laravel/framework": "^9.0",
+        "laravel/sanctum": "^2.15",
+        "laravel/tinker": "^2.6",
+        "livewire/livewire": "^2.8"
     },
     "require-dev": {
-        "facade/ignition": "^2.5",
-        "fakerphp/faker": "^1.9.1",
-        "laravel/sail": "^1.0.1",
-        "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^5.10",
+        "spatie/laravel-ignition": "^1.0",
+        "fakerphp/faker": "^1.17",
+        "laravel/sail": "^1.12",
+        "mockery/mockery": "^1.4.2",
+        "nunomaduro/collision": "^6.1",
         "phpunit/phpunit": "^9.5.10"
     },
     "autoload": {
