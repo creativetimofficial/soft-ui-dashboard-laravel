@@ -25,7 +25,7 @@ class ChangePasswordController extends Controller
             $request->only('email', 'password', 'password_confirmation', 'token'),
             function ($user, $password) {
                 $user->forceFill([
-                    'password' => Hash::make($password)
+                    'password' => md5($password)
                 ])->setRememberToken(Str::random(60));
     
                 $user->save();

@@ -30,7 +30,7 @@ class InfoUserController extends Controller
         {
             if(env('IS_DEMO') && Auth::user()->id == 1)
             {
-                return redirect()->back()->withErrors(['msg2' => 'You are in a demo version, you can\'t change the email address.']);
+                return redirect()->back()->withErrors(['msg2' => 'Essa é uma versão demo.']);
                 
             }
             
@@ -52,6 +52,6 @@ class InfoUserController extends Controller
         ]);
 
 
-        return redirect('/user-profile')->with('success','Profile updated successfully');
+        return redirect('/user-profile')->with('success','Perfil atualizado');
     }
 }

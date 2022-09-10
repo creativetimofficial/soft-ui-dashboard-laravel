@@ -18,7 +18,7 @@ class ResetController extends Controller
     {
         if(env('IS_DEMO'))
         {
-            return redirect()->back()->withErrors(['msg2' => 'You are in a demo version, you can\'t recover your password.']);
+            return redirect()->back()->withErrors(['msg2' => 'Essa é uma versão demo']);
         }
         else{
             $request->validate(['email' => 'required|email']);
