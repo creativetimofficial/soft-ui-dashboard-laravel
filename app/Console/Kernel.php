@@ -24,7 +24,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $min = config('app.scheduled');
+        if(env('IS_DEMO')) {
+            $schedule->command('migrate:fresh --seed')->cron('*/'. $min .' * * * *');
+        }
     }
 
     /**
