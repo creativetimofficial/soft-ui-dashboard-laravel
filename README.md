@@ -32,6 +32,7 @@ Whether you're working on a side project or delivering to a client, we've got yo
 ## Detailed documentation and example pages
 We also included detailed documentation for every component and feature so you can follow along. The pre-built example pages give you a quick glimpse of what Soft UI Dashboard Laravel has to offer so you can get started in no time. 
 
+If you want to get more features, go PRO with [Soft UI Dashboard PRO Laravel](https://www.creative-tim.com/product/soft-ui-dashboard-pro-laravel).
 
 ## Table of Contents
 
