@@ -1,4 +1,4 @@
-(function() {
+(function () {
   function r(e, n, t) {
     function o(i, f) {
       if (!n[i]) {
@@ -12,7 +12,7 @@
         var p = n[i] = {
           exports: {}
         };
-        e[i][0].call(p.exports, function(r) {
+        e[i][0].call(p.exports, function (r) {
           var n = e[i][1][r];
           return o(n || r)
         }, p, p.exports, r, e, n, t)
@@ -24,7 +24,7 @@
   }
   return r
 })()({
-  1: [function(require, module, exports) {
+  1: [function (require, module, exports) {
     /**
      * jKanban
      * Vanilla Javascript plugin for manage kanban boards
@@ -36,8 +36,8 @@
     //Require dragula
     var dragula = require("dragula");
 
-    (function() {
-      this.jKanban = function() {
+    (function () {
+      this.jKanban = function () {
         var self = this;
         var __DEFAULT_ITEM_HANDLE_OPTIONS = {
           enabled: false
@@ -73,21 +73,21 @@
           addItemButton: false,
           buttonContent: "+",
           itemHandleOptions: __DEFAULT_ITEM_HANDLE_OPTIONS,
-          dragEl: function(el, source) {},
-          dragendEl: function(el) {},
-          dropEl: function(el, target, source, sibling) {},
-          dragBoard: function(el, source) {},
-          dragendBoard: function(el) {},
-          dropBoard: function(el, target, source, sibling) {},
-          click: function(el) {},
-          buttonClick: function(el, boardId) {}
+          dragEl: function (el, source) { },
+          dragendEl: function (el) { },
+          dropEl: function (el, target, source, sibling) { },
+          dragBoard: function (el, source) { },
+          dragendBoard: function (el) { },
+          dropBoard: function (el, target, source, sibling) { },
+          click: function (el) { },
+          buttonClick: function (el, boardId) { }
         };
 
         if (arguments[0] && typeof arguments[0] === "object") {
           this.options = __extendDefaults(defaults, arguments[0]);
         }
 
-        this.__getCanMove = function(handle) {
+        this.__getCanMove = function (handle) {
           if (!self.options.itemHandleOptions.enabled) {
             return !!self.options.dragItems;
           }
@@ -99,7 +99,7 @@
           return handle.classList.contains("item_handle")
         }
 
-        this.init = function() {
+        this.init = function () {
           //set initial boards
           __setBoard();
           //set drag with dragula
@@ -107,31 +107,31 @@
             //Init Drag Board
             self.drakeBoard = self
               .dragula([self.container], {
-                moves: function(el, source, handle, sibling) {
+                moves: function (el, source, handle, sibling) {
                   if (!self.options.dragBoards) return false;
                   return (
                     handle.classList.contains("kanban-board-header") ||
                     handle.classList.contains("kanban-title-board")
                   );
                 },
-                accepts: function(el, target, source, sibling) {
+                accepts: function (el, target, source, sibling) {
                   return target.classList.contains("kanban-container");
                 },
                 revertOnSpill: true,
                 direction: "horizontal"
               })
-              .on("drag", function(el, source) {
+              .on("drag", function (el, source) {
                 el.classList.add("is-moving");
                 self.options.dragBoard(el, source);
                 if (typeof el.dragfn === "function") el.dragfn(el, source);
               })
-              .on("dragend", function(el) {
+              .on("dragend", function (el) {
                 __updateBoardsOrder();
                 el.classList.remove("is-moving");
                 self.options.dragendBoard(el);
                 if (typeof el.dragendfn === "function") el.dragendfn(el);
               })
-              .on("drop", function(el, target, source, sibling) {
+              .on("drop", function (el, target, source, sibling) {
                 el.classList.remove("is-moving");
                 self.options.dropBoard(el, target, source, sibling);
                 if (typeof el.dropfn === "function")
@@ -141,15 +141,15 @@
             //Init Drag Item
             self.drake = self
               .dragula(self.boardContainer, {
-                moves: function(el, source, handle, sibling) {
+                moves: function (el, source, handle, sibling) {
                   return self.__getCanMove(handle);
                 },
                 revertOnSpill: true
               })
-              .on("cancel", function(el, container, source) {
+              .on("cancel", function (el, container, source) {
                 self.enableAllBoards();
               })
-              .on("drag", function(el, source) {
+              .on("drag", function (el, source) {
                 var elClass = el.getAttribute("class");
                 if (elClass !== "" && elClass.indexOf("not-draggable") > -1) {
                   self.drake.cancel(true);
@@ -159,7 +159,7 @@
                 el.classList.add("is-moving");
                 var boardJSON = __findBoardJSON(source.parentNode.dataset.id);
                 if (boardJSON.dragTo !== undefined) {
-                  self.options.boards.map(function(board) {
+                  self.options.boards.map(function (board) {
                     if (
                       boardJSON.dragTo.indexOf(board.id) === -1 &&
                       board.id !== source.parentNode.dataset.id
@@ -173,12 +173,12 @@
                 if (el !== null && typeof el.dragfn === "function")
                   el.dragfn(el, source);
               })
-              .on("dragend", function(el) {
+              .on("dragend", function (el) {
                 self.options.dragendEl(el);
                 if (el !== null && typeof el.dragendfn === "function")
                   el.dragendfn(el);
               })
-              .on("drop", function(el, target, source, sibling) {
+              .on("drop", function (el, target, source, sibling) {
                 self.enableAllBoards();
 
                 var boardJSON = __findBoardJSON(source.parentNode.dataset.id);
@@ -203,7 +203,7 @@
           }
         };
 
-        this.enableAllBoards = function() {
+        this.enableAllBoards = function () {
           var allB = document.querySelectorAll(".kanban-board");
           if (allB.length > 0 && allB !== undefined) {
             for (var i = 0; i < allB.length; i++) {
@@ -212,7 +212,7 @@
           }
         };
 
-        this.addElement = function(boardID, element) {
+        this.addElement = function (boardID, element) {
           var board = self.element.querySelector(
             '[data-id="' + boardID + '"] .kanban-drag'
           );
@@ -222,7 +222,7 @@
             nodeItem.setAttribute("data-eid", element.id);
           }
           if (element.class && Array.isArray(element.class)) {
-            element.class.forEach(function(cl) {
+            element.class.forEach(function (cl) {
               nodeItem.classList.add(cl);
             })
           }
@@ -241,7 +241,7 @@
           return self;
         };
 
-        this.addForm = function(boardID, formItem) {
+        this.addForm = function (boardID, formItem) {
           var board = self.element.querySelector(
             '[data-id="' + boardID + '"] .kanban-drag'
           );
@@ -251,7 +251,7 @@
           return self;
         };
 
-        this.addBoards = function(boards, isInit) {
+        this.addBoards = function (boards, isInit) {
           if (self.options.responsivePercentage) {
             self.container.style.width = "100%";
             self.options.gutter = "1%";
@@ -278,13 +278,10 @@
               //add width to container
               if (self.container.style.width === "") {
                 self.container.style.width =
-                  parseInt(boardWidth) + parseInt(self.options.gutter) * 2 + "px";
+                  "100%;";
               } else {
                 self.container.style.width =
-                  parseInt(self.container.style.width) +
-                  parseInt(boardWidth) +
-                  parseInt(self.options.gutter) * 2 +
-                  "px";
+                  "100%;";
               }
             }
             //create node
@@ -306,7 +303,7 @@
               var allClasses = board.class.split(",");
             else allClasses = [];
             headerBoard.classList.add("kanban-board-header");
-            allClasses.map(function(value) {
+            allClasses.map(function (value) {
               headerBoard.classList.add(value);
             });
             headerBoard.innerHTML =
@@ -330,7 +327,7 @@
             if (board.bodyClass !== "" && board.bodyClass !== undefined)
               var bodyClasses = board.bodyClass.split(",");
             else bodyClasses = [];
-            bodyClasses.map(function(value) {
+            bodyClasses.map(function (value) {
               contentBoard.classList.add(value);
             });
             //add drag to array for dragula
@@ -344,7 +341,7 @@
                 nodeItem.dataset.eid = itemKanban.id;
               }
               if (itemKanban.class && Array.isArray(itemKanban.class)) {
-                itemKanban.class.forEach(function(cl) {
+                itemKanban.class.forEach(function (cl) {
                   nodeItem.classList.add(cl);
                 })
               }
@@ -374,12 +371,12 @@
           return self;
         };
 
-        this.findBoard = function(id) {
+        this.findBoard = function (id) {
           var el = self.element.querySelector('[data-id="' + id + '"]');
           return el;
         };
 
-        this.getParentBoardID = function(el) {
+        this.getParentBoardID = function (el) {
           if (typeof el === "string") {
             el = self.element.querySelector('[data-eid="' + el + '"]');
           }
@@ -389,7 +386,7 @@
           return el.parentNode.parentNode.dataset.id;
         };
 
-        this.moveElement = function(targetBoardID, elementID, element) {
+        this.moveElement = function (targetBoardID, elementID, element) {
           if (targetBoardID === this.getParentBoardID(elementID)) {
             return;
           }
@@ -398,7 +395,7 @@
           return this.addElement(targetBoardID, element);
         };
 
-        this.replaceElement = function(el, element) {
+        this.replaceElement = function (el, element) {
           var nodeItem = el;
           if (typeof nodeItem === "string") {
             nodeItem = self.element.querySelector('[data-eid="' + el + '"]');
@@ -413,19 +410,19 @@
           return self;
         };
 
-        this.findElement = function(id) {
+        this.findElement = function (id) {
           var el = self.element.querySelector('[data-eid="' + id + '"]');
           return el;
         };
 
-        this.getBoardElements = function(id) {
+        this.getBoardElements = function (id) {
           var board = self.element.querySelector(
             '[data-id="' + id + '"] .kanban-drag'
           );
           return board.childNodes;
         };
 
-        this.removeElement = function(el) {
+        this.removeElement = function (el) {
           if (typeof el === "string")
             el = self.element.querySelector('[data-eid="' + el + '"]');
           if (el !== null) {
@@ -434,7 +431,7 @@
           return self;
         };
 
-        this.removeBoard = function(board) {
+        this.removeBoard = function (board) {
           var boardElement = null;
           if (typeof board === "string")
             boardElement = self.element.querySelector('[data-id="' + board + '"]');
@@ -454,7 +451,7 @@
         };
 
         // board button on click function
-        this.onButtonClick = function(el) {};
+        this.onButtonClick = function (el) { };
         //PRIVATE FUNCTION
         function __extendDefaults(source, properties) {
           var property;
@@ -479,7 +476,7 @@
         }
 
         function __onclickHandler(nodeItem, clickfn) {
-          nodeItem.addEventListener("click", function(e) {
+          nodeItem.addEventListener("click", function (e) {
             e.preventDefault();
             self.options.click(this);
             if (typeof this.clickfn === "function") this.clickfn(this);
@@ -487,7 +484,7 @@
         }
 
         function __onButtonClickHandler(nodeItem, boardId) {
-          nodeItem.addEventListener("click", function(e) {
+          nodeItem.addEventListener("click", function (e) {
             e.preventDefault();
             self.options.buttonClick(this, boardId);
             // if(typeof(this.clickfn) === 'function')
@@ -497,7 +494,7 @@
 
         function __findBoardJSON(id) {
           var el = [];
-          self.options.boards.map(function(board) {
+          self.options.boards.map(function (board) {
             if (board.id === id) {
               return el.push(board);
             }
@@ -554,13 +551,13 @@
   }, {
     "dragula": 9
   }],
-  2: [function(require, module, exports) {
+  2: [function (require, module, exports) {
     module.exports = function atoa(a, n) {
       return Array.prototype.slice.call(a, n);
     }
 
   }, {}],
-  3: [function(require, module, exports) {
+  3: [function (require, module, exports) {
     'use strict';
 
     var ticky = require('ticky');
@@ -577,7 +574,7 @@
   }, {
     "ticky": 11
   }],
-  4: [function(require, module, exports) {
+  4: [function (require, module, exports) {
     'use strict';
 
     var atoa = require('atoa');
@@ -589,7 +586,7 @@
       if (thing === undefined) {
         thing = {};
       }
-      thing.on = function(type, fn) {
+      thing.on = function (type, fn) {
         if (!evt[type]) {
           evt[type] = [fn];
         } else {
@@ -597,12 +594,12 @@
         }
         return thing;
       };
-      thing.once = function(type, fn) {
+      thing.once = function (type, fn) {
         fn._once = true; // thing.off(fn) still works!
         thing.on(type, fn);
         return thing;
       };
-      thing.off = function(type, fn) {
+      thing.off = function (type, fn) {
         var c = arguments.length;
         if (c === 1) {
           delete evt[type];
@@ -617,13 +614,13 @@
         }
         return thing;
       };
-      thing.emit = function() {
+      thing.emit = function () {
         var args = atoa(arguments);
         return thing.emitterSnapshot(args.shift()).apply(this, args);
       };
-      thing.emitterSnapshot = function(type) {
+      thing.emitterSnapshot = function (type) {
         var et = (evt[type] || []).slice(0);
-        return function() {
+        return function () {
           var args = atoa(arguments);
           var ctx = this || thing;
           if (type === 'error' && opts.throws !== false && !et.length) {
@@ -649,8 +646,8 @@
     "./debounce": 3,
     "atoa": 2
   }],
-  5: [function(require, module, exports) {
-    (function(global) {
+  5: [function (require, module, exports) {
+    (function (global) {
       'use strict';
 
       var customEvent = require('custom-event');
@@ -766,8 +763,8 @@
     "./eventmap": 6,
     "custom-event": 7
   }],
-  6: [function(require, module, exports) {
-    (function(global) {
+  6: [function (require, module, exports) {
+    (function (global) {
       'use strict';
 
       var eventmap = [];
@@ -784,8 +781,8 @@
 
     }).call(this, typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
   }, {}],
-  7: [function(require, module, exports) {
-    (function(global) {
+  7: [function (require, module, exports) {
+    (function (global) {
 
       var NativeCustomEvent = global.CustomEvent;
 
@@ -797,7 +794,7 @@
             }
           });
           return 'cat' === p.type && 'bar' === p.detail.foo;
-        } catch (e) {}
+        } catch (e) { }
         return false;
       }
 
@@ -822,25 +819,25 @@
           return e;
         } :
 
-        // IE <= 8
-        function CustomEvent(type, params) {
-          var e = document.createEventObject();
-          e.type = type;
-          if (params) {
-            e.bubbles = Boolean(params.bubbles);
-            e.cancelable = Boolean(params.cancelable);
-            e.detail = params.detail;
-          } else {
-            e.bubbles = false;
-            e.cancelable = false;
-            e.detail = void 0;
+          // IE <= 8
+          function CustomEvent(type, params) {
+            var e = document.createEventObject();
+            e.type = type;
+            if (params) {
+              e.bubbles = Boolean(params.bubbles);
+              e.cancelable = Boolean(params.cancelable);
+              e.detail = params.detail;
+            } else {
+              e.bubbles = false;
+              e.cancelable = false;
+              e.detail = void 0;
+            }
+            return e;
           }
-          return e;
-        }
 
     }).call(this, typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
   }, {}],
-  8: [function(require, module, exports) {
+  8: [function (require, module, exports) {
     'use strict';
 
     var cache = {};
@@ -876,8 +873,8 @@
     };
 
   }, {}],
-  9: [function(require, module, exports) {
-    (function(global) {
+  9: [function (require, module, exports) {
+    (function (global) {
       'use strict';
 
       var emitter = require('contra/emitter');
@@ -1567,7 +1564,7 @@
     "contra/emitter": 4,
     "crossvent": 5
   }],
-  10: [function(require, module, exports) {
+  10: [function (require, module, exports) {
     // shim for using process in browser
     var process = module.exports = {};
 
@@ -1586,7 +1583,7 @@
     function defaultClearTimeout() {
       throw new Error('clearTimeout has not been defined');
     }
-    (function() {
+    (function () {
       try {
         if (typeof setTimeout === 'function') {
           cachedSetTimeout = setTimeout;
@@ -1704,7 +1701,7 @@
       runClearTimeout(timeout);
     }
 
-    process.nextTick = function(fun) {
+    process.nextTick = function (fun) {
       var args = new Array(arguments.length - 1);
       if (arguments.length > 1) {
         for (var i = 1; i < arguments.length; i++) {
@@ -1722,7 +1719,7 @@
       this.fun = fun;
       this.array = array;
     }
-    Item.prototype.run = function() {
+    Item.prototype.run = function () {
       this.fun.apply(null, this.array);
     };
     process.title = 'browser';
@@ -1732,7 +1729,7 @@
     process.version = ''; // empty string to avoid regexp issues
     process.versions = {};
 
-    function noop() {}
+    function noop() { }
 
     process.on = noop;
     process.addListener = noop;
@@ -1744,35 +1741,35 @@
     process.prependListener = noop;
     process.prependOnceListener = noop;
 
-    process.listeners = function(name) {
+    process.listeners = function (name) {
       return []
     }
 
-    process.binding = function(name) {
+    process.binding = function (name) {
       throw new Error('process.binding is not supported');
     };
 
-    process.cwd = function() {
+    process.cwd = function () {
       return '/'
     };
-    process.chdir = function(dir) {
+    process.chdir = function (dir) {
       throw new Error('process.chdir is not supported');
     };
-    process.umask = function() {
+    process.umask = function () {
       return 0;
     };
 
   }, {}],
-  11: [function(require, module, exports) {
-    (function(setImmediate) {
+  11: [function (require, module, exports) {
+    (function (setImmediate) {
       var si = typeof setImmediate === 'function',
         tick;
       if (si) {
-        tick = function(fn) {
+        tick = function (fn) {
           setImmediate(fn);
         };
       } else {
-        tick = function(fn) {
+        tick = function (fn) {
           setTimeout(fn, 0);
         };
       }
@@ -1782,8 +1779,8 @@
   }, {
     "timers": 12
   }],
-  12: [function(require, module, exports) {
-    (function(setImmediate, clearImmediate) {
+  12: [function (require, module, exports) {
+    (function (setImmediate, clearImmediate) {
       var nextTick = require('process/browser.js').nextTick;
       var apply = Function.prototype.apply;
       var slice = Array.prototype.slice;
@@ -1792,14 +1789,14 @@
 
       // DOM APIs, for completeness
 
-      exports.setTimeout = function() {
+      exports.setTimeout = function () {
         return new Timeout(apply.call(setTimeout, window, arguments), clearTimeout);
       };
-      exports.setInterval = function() {
+      exports.setInterval = function () {
         return new Timeout(apply.call(setInterval, window, arguments), clearInterval);
       };
       exports.clearTimeout =
-        exports.clearInterval = function(timeout) {
+        exports.clearInterval = function (timeout) {
           timeout.close();
         };
 
@@ -1807,23 +1804,23 @@
         this._id = id;
         this._clearFn = clearFn;
       }
-      Timeout.prototype.unref = Timeout.prototype.ref = function() {};
-      Timeout.prototype.close = function() {
+      Timeout.prototype.unref = Timeout.prototype.ref = function () { };
+      Timeout.prototype.close = function () {
         this._clearFn.call(window, this._id);
       };
 
       // Does not start the time, just sets up the members needed.
-      exports.enroll = function(item, msecs) {
+      exports.enroll = function (item, msecs) {
         clearTimeout(item._idleTimeoutId);
         item._idleTimeout = msecs;
       };
 
-      exports.unenroll = function(item) {
+      exports.unenroll = function (item) {
         clearTimeout(item._idleTimeoutId);
         item._idleTimeout = -1;
       };
 
-      exports._unrefActive = exports.active = function(item) {
+      exports._unrefActive = exports.active = function (item) {
         clearTimeout(item._idleTimeoutId);
 
         var msecs = item._idleTimeout;
@@ -1836,7 +1833,7 @@
       };
 
       // That's not how node.js implements it but the exposed api is the same.
-      exports.setImmediate = typeof setImmediate === "function" ? setImmediate : function(fn) {
+      exports.setImmediate = typeof setImmediate === "function" ? setImmediate : function (fn) {
         var id = nextImmediateId++;
         var args = arguments.length < 2 ? false : slice.call(arguments, 1);
 
@@ -1859,7 +1856,7 @@
         return id;
       };
 
-      exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate : function(id) {
+      exports.clearImmediate = typeof clearImmediate === "function" ? clearImmediate : function (id) {
         delete immediateIds[id];
       };
     }).call(this, require("timers").setImmediate, require("timers").clearImmediate)

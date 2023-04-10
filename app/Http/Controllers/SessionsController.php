@@ -26,22 +26,30 @@ class SessionsController extends Controller
 
         if(!$userCrm) return back()->withErrors(['email'=>'Usuário não encontrado.']);
 
-        $user = User::where('email', $attributes['email'])->where('password', bcrypt($attributes['password']))->first();
-
         $attributesNew['email'] = $userCrm->email;
         $attributesNew['password'] = $attributes['password'];
         $attributesNew['name'] = $userCrm->first_name.' '.$userCrm->last_name;
 
-        if(!$user) {
+        $user = User::where('email', $attributes['email'])->first();
+
+        if($user) {
             try {
                 $attributesNew['password'] = bcrypt($attributes['password']);
-                $user = User::create($attributesNew);
-                Auth::login($user); 
+                $user->password = $attributesNew['password'];
+                $user->save();
+                Auth::login($user);
             } catch (\Throwable $th) {
                 return back()->withErrors(['email'=>'Erro ao realizar o login, entre em contato com o grupo de suporte.']);
             }
         }else{
-            if(!Auth::attempt($attributes)) return back()->withErrors(['email'=>'Email ou senha inválidos.']);
+            try {
+                $attributesNew['password'] = bcrypt($attributes['password']);
+                $attributesNew['role_id'] = '3';
+                $user = User::create($attributesNew);
+                Auth::login($user); 
+            } catch (\Throwable $th) {
+                return back()->withErrors(['email'=>'Erro ao realizar primeiro login, entre em contato com o grupo de suporte.']);
+            }
         }
 
         session()->regenerate();

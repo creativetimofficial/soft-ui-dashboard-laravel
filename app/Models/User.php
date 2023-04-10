@@ -25,6 +25,8 @@ class User extends Authenticatable
         'role_id',
         'location',
         'about_me',
+        'store_id',
+        'photo'
     ];
 
     /**

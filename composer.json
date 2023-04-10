@@ -2,15 +2,25 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "barryvdh/laravel-dompdf": "^2.0",
+        "carlos-meneses/laravel-mpdf": "^2.1",
+        "chillerlan/php-qrcode": "^4.3",
+        "dompdf/dompdf": "^2.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.4",
+        "intervention/image": "^2.7",
         "laravel/framework": "^9.0",
         "laravel/sanctum": "^2.15",
-        "laravel/tinker": "^2.6"
+        "laravel/tinker": "^2.6",
+        "microsoft/microsoft-graph": "^1.88",
+        "mpdf/mpdf": "^8.1"
     },
     "require-dev": {
         "spatie/laravel-ignition": "^1.0",
@@ -25,7 +35,10 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "app/Helpers/Helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

@@ -16,6 +16,16 @@ class InfoUserController extends Controller
         return view('laravel-examples/user-profile');
     }
 
+    public function saveUser($id, Request $request){
+        $input = $request->all();
+        try {
+            User::where('id',$id)->update(['store_id'=>$input['store_id']]);
+            return back()->with('success','Perfil atualizado');
+        } catch (\Throwable $th) {
+            return back()->with('error','Perfil não atualizado');
+        }
+    }
+
     public function store(Request $request)
     {
 

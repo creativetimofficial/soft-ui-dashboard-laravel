@@ -23,8 +23,7 @@ class RegisterController extends Controller
             'agreement' => ['accepted']
         ]);
         $attributes['password'] = bcrypt($attributes['password'] );
-
-        
+        $attributes['role_id'] = '3';
 
         session()->flash('success', 'Conta criada.');
         $user = User::create($attributes);
