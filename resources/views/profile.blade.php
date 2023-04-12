@@ -67,7 +67,7 @@
                             <div class="mb-3">
                                 <label for="tem-tele" class="form-label">Tem Tele?</label>
                                 <select class="form-select" id="tem-tele" name="tem-tele" required>
-                                    <option value="" selected>Selecione uma opção..</option>
+                                    <option value="" disabled selected hidden>Selecione uma opção..</option>
                                     <option value="1">Sim</option>
                                     <option value="0">Não</option>
                                 </select>
@@ -75,7 +75,7 @@
                             <div class="mb-3">
                                 <label for="is_24" class="form-label">É 24H?</label>
                                 <select class="form-select" id="is_24" name="is_24" required>
-                                    <option value="" selected>Selecione uma opção..</option>
+                                  <option value="" disabled selected hidden>Selecione uma opção...</option>
                                     <option value="1">Sim</option>
                                     <option value="0">Não</option>
                                 </select>
