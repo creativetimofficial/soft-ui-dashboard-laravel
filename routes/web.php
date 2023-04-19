@@ -8,6 +8,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ResetController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\FormController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,7 @@ use App\Models\CardLog;
 use App\Models\CampanhaSucesso;
 use App\Models\Download;
 use App\Models\Order;
+use App\Models\Form;
 use Illuminate\Support\Facades\Auth;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Config;
@@ -118,6 +120,9 @@ Route::group(['middleware' => 'auth'], function () {
 		if(!$user->store_id) return redirect('usuario')->with('error','Para acessar essa página, vincule um código de loja ao seu usuário.');
 		return view('requisicao-de-arte')->with('user',$user);
 	})->name('requisicao-de-arte');
+
+	Route::get('requisicao-de-arte/storeform', [FormController::class, 'store'])->name('requisicao-de-arte/storeform');
+	//Route::resource('form', FormController::class);
 
 	Route::get('/arte/{id}', function ($id) {
 		$user = Auth::user();
