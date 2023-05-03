@@ -36,6 +36,10 @@ use Illuminate\Support\Facades\Config;
 |
 */
 
+Route::get('info', function () {
+	return phpinfo();
+})->name('info');
+
 Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/', [HomeController::class, 'home']);
@@ -48,6 +52,7 @@ Route::group(['middleware' => 'auth'], function () {
 		$downloads = Download::where('type','2')->count();
 		return view('dashboard')->with('totalUsers',$users)->with('totalInfos',$infosCount)->with('totalCards',$totalCards)->with('cardsList',$cards)->with('infosList',$infos)->with('totalDownloads',$downloads);
 	})->name('dashboard');
+
 
 	Route::get('/informativo/{id}', function ($id) {
 		$user = Auth::user();
@@ -69,7 +74,16 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('usuario', function () {
 		$user = Auth::user();
-		return view('profile')->with('user',$user);
+		$allData = Http::withHeaders([
+			'token'=>'apiToken'
+		])->get('https://maxxieconomica.com/api/stores-getall');
+		if(!$allData->successful()){
+			$allData = array();
+		}else{
+			$allData = $allData['data'];
+		}
+
+		return view('profile')->with('user',$user)->with('stores', $allData);
 	})->name('usuario');
 
 	Route::get('campanha/plano-de-sucesso', function () {
@@ -114,6 +128,12 @@ Route::group(['middleware' => 'auth'], function () {
 		$user = Auth::user();
 		return view('profile')->with('user',$user);
 	})->name('sugestoes');
+
+	Route::get('custo-de-produtos', function () {
+		$user = Auth::user();
+		return view('custo-produtos')->with('user', $user);
+	})->name('custo-de-produtos');
+	
 
 	Route::get('requisicao-de-arte', function () {
 		$user = Auth::user();

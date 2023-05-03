@@ -7,14 +7,14 @@
                 <div class="card">
                     <div class="card-body p-3">
                         <div class="d-flex mb-2">
-                            <a href="https://1drv.ms/u/s!AtRXG4Vg2pI-10o5sqagcmPa2fcf?e=dYOTy4" target="_blank">
+                            <a href="https://1drv.ms/f/s!AtRXG4Vg2pI-3Q9nZXS0S-DjM-Mo?e=2eO4xy" target="_blank">
                                 <div class="avatar avatar-xl bg-gradient-warning border-radius-md p-2">
                                     <i class="fa fa-drafting-compass text-lg opacity-10" aria-hidden="true"></i>
                                 </div>
                             </a>
                             <div class="ms-3 my-auto">
                                 <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-                                    href="https://1drv.ms/u/s!AtRXG4Vg2pI-10o5sqagcmPa2fcf?e=dYOTy4" target="_blank">
+                                    href="https://1drv.ms/f/s!AtRXG4Vg2pI-3Q9nZXS0S-DjM-Mo?e=2eO4xy" target="_blank">
                                     <h6>Diretório de Arquivos</h6>
                                 </a>
                                 <p class="text-sm mt-2">Acesse esse link para baixar imagens de campanhas e arquivos de
@@ -22,7 +22,7 @@
                             </div>
                         </div>
                         <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
-                            href="https://1drv.ms/u/s!AtRXG4Vg2pI-10o5sqagcmPa2fcf?e=dYOTy4" target="_blank">
+                            href="https://1drv.ms/f/s!AtRXG4Vg2pI-3Q9nZXS0S-DjM-Mo?e=2eO4xy" target="_blank">
                             Acessar
                             <i class="fas fa-hand-point-left text-sm ms-1" aria-hidden="true"></i>
                         </a>

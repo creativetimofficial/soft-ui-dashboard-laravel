@@ -20682,7 +20682,6 @@ hr.horizontal.gray-light {
 
 .navbar-vertical.navbar-expand-xs .navbar-collapse {
     display: block;
-    overflow: auto;
     height: calc(100vh);
 }
 

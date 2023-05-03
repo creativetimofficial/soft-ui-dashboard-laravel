@@ -1,4 +1,4 @@
-@extends('layouts.user_type.auth')
+@extends('layouts.user_type.auth', ['parentFolder' => 'ecommerce', 'childFolder' => 'cancelamentos'])
 <script src="../assets/js/plugins/jquery.js"></script>
 @section('content')
     <div class="row" id="contentArt">

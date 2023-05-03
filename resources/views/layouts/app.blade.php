@@ -65,6 +65,11 @@
     <script src="../assets/js/plugins/dragula/dragula.min.js"></script>
     <script src="../assets/js/plugins/jkanban/jkanban.js"></script>
 
+    @if (Request::is('custo-de-produtos'))
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />
+        <script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js""></script>
+    @endif
+
     @stack('dashboard')
     <script>
         var win = navigator.platform.indexOf('Win') > -1;

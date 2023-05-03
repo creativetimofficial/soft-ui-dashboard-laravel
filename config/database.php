@@ -100,17 +100,29 @@ return [
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '1433'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'url' => env('SQLSRVDATABASE_URL'),
+            'host' => env('SQLSRVDB_HOST', 'localhost'),
+            'port' => env('SQLSRVDB_PORT', '1433'),
+            'database' => env('SQLSRVDB_DATABASE', 'forge'),
+            'username' => env('SQLSRVDB_USERNAME', 'forge'),
+            'password' => env('SQLSRVDB_PASSWORD', ''),
+            'trust_server_certificate' => true,
             'charset' => 'utf8',
             'prefix' => '',
+            'encrypt' => 'yes',
             'prefix_indexes' => true,
         ],
 
+        'firebird' => [
+            'driver'=> 'firebird',
+            'host'=> env('DB_FIREBIRD_HOST', 'localhost'),
+            'database' => env('DB_FIREBIRD_DATABASE', '/path_to/database.fdb'),
+            'username' => env('DB_FIREBIRD_USERNAME', 'SYSDBA'),
+            'password' => env('DB_FIREBIRD_PASSWORD', 'masterkey'),
+            'charset' => env('DB_FIREBIRD_CHARSET', 'UTF8'),
+            'port'     => env('DB_FIREBIRD_PORT', '3050'),
+            'role'     => null,
+        ],
     ],
 
     /*

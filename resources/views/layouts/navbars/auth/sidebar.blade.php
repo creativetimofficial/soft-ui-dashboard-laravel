@@ -1,5 +1,11 @@
 @php
     $user = Auth::user();
+    if (!isset($parentFolder)) {
+        $parentFolder = '';
+    }
+    if (!isset($childFolder)) {
+        $childFolder = '';
+    }
 @endphp
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 "
     id="sidenav-main">
@@ -22,6 +28,18 @@
                     <span class="nav-link-text ms-1">Dashboard</span>
                 </a>
             </li>
+            @if ($user->role_id == 1 || $user->role_id == 6)
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('custo-de-produtos') ? 'active' : '' }}"
+                        href="{{ url('custo-de-produtos') }}">
+                        <div
+                            class="icon icon-shape icon-sm shadow border-radius-md bg-gradient-success text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="fa fa-list"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Custo de Produtos</span>
+                    </a>
+                </li>
+            @endif
             <li class="nav-item mt-4">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Design</h6>
             </li>
@@ -44,45 +62,42 @@
                     <span class="nav-link-text ms-1">Requisição de Arte</span>
                 </a>
             </li>
-            <li class="nav-item mt-4">
-                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Ecommerce</h6>
-            </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('cancelamentos') ? 'active' : '' }}"
-                    href="{{ url('cancelamentos') }}">
+                <a data-bs-toggle="collapse" href="#ecommerceMenu"
+                    class="nav-link {{ $parentFolder == 'ecommerce' ? ' active' : '' }}"
+                    aria-controls="applicationsExamples" role="button" aria-expanded="false">
                     <div
-                        class="icon icon-shape icon-sm shadow border-radius-md bg-gradient-success text-center me-2 d-flex align-items-center justify-content-center">
+                        class="icon icon-shape icon-sm shadow border-radius-md bg-gradient-warning text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="fa fa-shopping-cart"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Cancelamentos</span>
+                    <span class="nav-link-text ms-1">Ecommerce</span>
                 </a>
+                <div class="collapse {{ $parentFolder == 'ecommerce' ? ' show' : '' }}" id="ecommerceMenu">
+                    <ul class="nav ms-4 ps-3">
+                        <li class="nav-item {{ $childFolder == 'cancelamentos' ? 'active' : '' }}">
+                            <a class="nav-link {{ $childFolder == 'cancelamentos' ? 'active' : '' }}"
+                                href="{{ url('cancelamentos') }}">
+                                <span class="sidenav-mini-icon"> Ca </span>
+                                <span class="sidenav-normal"> Cancelamentos </span>
+                            </a>
+                        </li>
+                        <li class="nav-item {{ $childFolder == 'estornos' ? 'active' : '' }}">
+                            <a class="nav-link {{ $childFolder == 'estornos' ? 'active' : '' }}"
+                                href="{{ url('estornos') }}">
+                                <span class="sidenav-mini-icon"> Es </span>
+                                <span class="sidenav-normal"> Estornos </span>
+                            </a>
+                        </li>
+                        <li class="nav-item {{ $childFolder == 'pedidos' ? 'active' : '' }}">
+                            <a class="nav-link {{ $childFolder == 'pedidos' ? 'active' : '' }}"
+                                href="{{ url('pedidos') }}">
+                                <span class="sidenav-mini-icon"> Pe </span>
+                                <span class="sidenav-normal"> Pedidos </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{ Request::is('estornos') ? 'active' : '' }}" href="{{ url('estornos') }}">
-                    <div
-                        class="icon icon-shape icon-sm shadow border-radius-md bg-gradient-success text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fa fa-credit-card"></i>
-                    </div>
-                    <span class="nav-link-text ms-1">Estornos</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {{ Request::is('pedidos') ? 'active' : '' }}" href="{{ url('pedidos') }}">
-                    <div
-                        class="icon icon-shape icon-sm shadow border-radius-md bg-gradient-success text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="fa fa-list"></i>
-                    </div>
-                    <span class="nav-link-text ms-1">Pedidos</span>
-                </a>
-            </li>
-            {{-- <li class="nav-item">
-        <a class="nav-link {{ (Request::is('sugestoes') ? 'active' : '') }}" href="{{ url('dashboard') }}">
-          <div class="icon icon-shape icon-sm shadow border-radius-md bg-gradient-success text-center me-2 d-flex align-items-center justify-content-center">
-            <i class="fa fa-paperclip"></i>
-          </div>
-          <span class="nav-link-text ms-1">Sugestões</span>
-        </a>
-      </li> --}}
             @if ($user->role_id == 2)
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('financeiro') ? 'active' : '' }}"
