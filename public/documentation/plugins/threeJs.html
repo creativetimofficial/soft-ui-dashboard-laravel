@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="apple-touch-icon" sizes="76x76" href="https://demos.creative-tim.com/argon-design-system-pro/assets/img/apple-icon.png">
+        <link rel="icon" href="https://demos.creative-tim.com/argon-design-system-pro/assets/img/apple-icon.png" type="image/png">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Creative Tim">
+        <title>
+          Three JS | Soft UI Dashboard Bootstrap @ Creative Tim
+        </title>
+        <link rel="canonical" href="https://www.creative-tim.com/learning-lab/bootstrap/three-js/soft-ui-dashboard">
+        <meta name="keywords" content="creative tim, updivision, html dashboard, laravel, html css dashboard laravel, soft ui dashboard laravel, laravel soft ui dashboard, soft ui admin, laravel dashboard, laravel admin, web dashboard, bootstrap 5 dashboard laravel, bootstrap 5, css3 dashboard, bootstrap 5 admin laravel, soft ui dashboard bootstrap 5 laravel, frontend, responsive bootstrap 5 dashboard, soft ui dashboard, soft ui laravel bootstrap 5 dashboard" />
+        <meta name="description" content="A free Laravel Dashboard featuring dozens of UI components & basic Laravel CRUDs." />
+        <meta itemprop="name" content="Soft UI Dashboard Laravel by Creative Tim & UPDIVISION" />
+        <meta itemprop="description" content="A free Laravel Dashboard featuring dozens of UI components & basic Laravel CRUDs." />
+        <meta itemprop="image" content="https://s3.amazonaws.com/creativetim_bucket/products/602/original/soft-ui-dashboard-laravel.jpg" />
+        <meta name="twitter:card" content="product" />
+        <meta name="twitter:site" content="@creativetim" />
+        <meta name="twitter:title" content="Soft UI Dashboard Laravel by Creative Tim & UPDIVISION" />
+        <meta name="twitter:description" content="A free Laravel Dashboard featuring dozens of UI components & basic Laravel CRUDs." />
+        <meta name="twitter:creator" content="@creativetim" />
+        <meta name="twitter:image" content="https://s3.amazonaws.com/creativetim_bucket/products/602/original/soft-ui-dashboard-laravel.jpg" />
+        <meta property="fb:app_id" content="655968634437471" />
+        <meta property="og:title" content="Soft UI Dashboard Laravel by Creative Tim & UPDIVISION" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.creative-tim.com/live/soft-ui-dashboard-laravel" />
+        <meta property="og:image" content="https://s3.amazonaws.com/creativetim_bucket/products/602/original/soft-ui-dashboard-laravel.jpg" />
+        <meta property="og:description" content="A free Laravel Dashboard featuring dozens of UI components & basic Laravel CRUDs." />
+        <meta property="og:site_name" content="Creative Tim" />
+        <link rel="stylesheet" href="https://demos.creative-tim.com/argon-design-system-pro/assets/css/nucleo-icons.css" type="text/css">
+        <link href="" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://demos.creative-tim.com/test/soft-ui-dashboard-pro/assets/css/soft-ui-dashboard.min.css?v=1.0.0" type="text/css">
+        <link rel="stylesheet" href="../../assets/demo.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+        <link href="https://demos.creative-tim.com/argon-design-system-pro/assets/css/nucleo-icons.css" rel="stylesheet">
+        <script async="" src="https://s.pinimg.com/ct/lib/main.6ae4a9fc.js"></script>
+        <script type="text/javascript" async="" src="https://s.pinimg.com/ct/core.js"></script>
+        <script type="text/javascript" async="" src="https://static.hotjar.com/c/hotjar-99526.js?sv=7"></script>
+        <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+        <script type="text/javascript" async="" src="https://www.google-analytics.com/gtm/js?id=GTM-K9BGS8K&amp;cid=1113738810.1638876382&amp;aip=true"></script>
+        <script src="https://connect.facebook.net/signals/config/111649226022273?v=2.9.48&amp;r=stable" async=""></script>
+        <script async="" src="//connect.facebook.net/en_US/fbevents.js"></script>
+        <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NKDMSK6"></script>
+        <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+
+        <!-- Anti-flicker snippet (recommended)  -->
+        <style>
+          .async-hide {
+            opacity: 0 !important
+          }
+        </style>
+        <script>
+          (function(a, s, y, n, c, h, i, d, e) {
+            s.className += ' ' + y;
+            h.start = 1 * new Date;
+            h.end = i = function() {
+              s.className = s.className.replace(RegExp(' ?' + y), '')
+            };
+            (a[n] = a[n] || []).hide = h;
+            setTimeout(function() {
+              i();
+              h.end = null
+            }, c);
+            h.timeout = c;
+          })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
+            'GTM-K9BGS8K': true
+          });
+        </script>
+        <!-- Analytics-Optimize Snippet -->
+        <script>
+          (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+              (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+          })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+          ga('create', 'UA-46172202-22', 'auto', {
+            allowLinker: true
+          });
+          ga('set', 'anonymizeIp', true);
+          ga('require', 'GTM-K9BGS8K');
+          ga('require', 'displayfeatures');
+          ga('require', 'linker');
+          ga('linker:autoLink', ["2checkout.com", "avangate.com"]);
+        </script>
+        <!-- end Analytics-Optimize Snippet -->
+        <!-- Google Tag Manager -->
+        <script>
+          (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+              'gtm.start': new Date().getTime(),
+              event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+              'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+          })(window, document, 'script', 'dataLayer', 'GTM-NKDMSK6');
+        </script>
+        <!-- End Google Tag Manager -->
+        <!-- This is for docs typography and layout -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+        <link href="../../assets/docs-soft.css" rel="stylesheet">
+      <script async="" src="https://script.hotjar.com/modules.54959b9c945092ba123f.js" charset="utf-8"></script>
+      <style type="text/css">
+      iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
+      <meta http-equiv="origin-trial" content="A13s4hjGQNypqXJtC3txOObvdElWKqJttxI7WhcRiEX0+Y28BmRR2ZTW8rSV659YQd1xb9tpLof5Eehz3SMUXgwAAACHeyJvcmlnaW4iOiJodHRwczovL3d3dy5waW50ZXJlc3QuY29tOjQ0MyIsImZlYXR1cmUiOiJDb252ZXJzaW9uTWVhc3VyZW1lbnQiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+    </head>
+
+<body class="docs">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6"
+                height="0"
+                width="0"
+                style="display: none; visibility: hidden"
+            ></iframe
+        ></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <header class="ct-docs-navbar">
+            <a class="ct-docs-navbar-brand" href="javascript:void(0)" aria-label="Bootstrap">
+                </a><a href="https://www.creative-tim.com/" class="ct-docs-navbar-text" target="_blank">
+                    Creative Tim
+                </a>
+                <div class="ct-docs-navbar-border"></div>
+                <a href="../../documentation/getting-started/installation.html" class="ct-docs-navbar-text">
+                    Docs
+                </a>
+
+            <ul class="ct-docs-navbar-nav-left">
+                <li class="ct-docs-nav-item-dropdown">
+                    <a href="javascript:;" class="ct-docs-navbar-nav-link" role="button">
+                        <span class="ct-docs-navbar-nav-link-inner--text">Live Preview</span>
+                    </a>
+                    <div class="ct-docs-navbar-dropdown-menu" aria-labelledby="DropdownPreview">
+                        <a class="ct-docs-navbar-dropdown-item" href="https://soft-ui-dashboard-laravel.creative-tim.com/" target="_blank">
+                            Soft UI Dashboard
+                        </a>
+                    </div>
+                </li>
+                <li class="ct-docs-nav-item-dropdown">
+                    <a href="javascript:;" class="ct-docs-navbar-nav-link" role="button">
+                        <span class="ct-docs-navbar-nav-link-inner--text">Support</span>
+                    </a>
+                    <div class="ct-docs-navbar-dropdown-menu" aria-labelledby="DropdownSupport">
+                        <a class="ct-docs-navbar-dropdown-item" href="https://github.com/creativetimofficial/soft-ui-dashboard-laravel/issues" target="_blank">
+                            Soft UI Dashboard
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="ct-docs-navbar-nav-right">
+                <li class="ct-docs-navbar-nav-item">
+                    <a class="ct-docs-navbar-nav-link" href="https://www.creative-tim.com/product/soft-ui-dashboard-pro-laravel" target="_blank">Buy Now</a>
+                </li>
+                <li class="ct-docs-navbar-nav-item">
+                    <a class="ct-docs-navbar-nav-link" href="https://www.creative-tim.com/product/soft-ui-dashboard-laravel" target="_blank">Download Free</a>
+                </li>
+            </ul>
+            <button class="ct-docs-navbar-toggler" type="button">
+                <span class="ct-docs-navbar-toggler-icon"></span>
+            </button>
+        </header>
+        <div class="ct-docs-main-container">
+            <div class="ct-docs-main-content-row">
+                <div class="ct-docs-sidebar-col">
+                    <nav class="ct-docs-sidebar-collapse-links">
+                        <div class="ct-docs-sidebar-product">
+                            <div class="ct-docs-sidebar-product-image">
+                                <img src="../../assets/img/bootstrap-5.svg">
+                            </div>
+                            <p class="ct-docs-sidebar-product-text">
+                                Soft UI Dashboard
+                            </p>
+                        </div>
+                        <div class="ct-docs-toc-item-active">
+                            <a class="ct-docs-toc-link" href="javascript:void(0)">
+                                <div class="d-inline-block">
+                                    <div class="
+                                            icon icon-xs
+                                            border-radius-md
+                                            bg-gradient-warning
+                                            text-center
+                                            mr-2
+                                            d-flex
+                                            align-items-center
+                                            justify-content-center
+                                            me-1
+                                        ">
+                                        <i class="ni ni-active-40 text-white"></i>
+                                    </div>
+                                </div>
+                                Getting started
+                            </a>
+                            <ul class="ct-docs-nav-sidenav ms-4 ps-1">
+                                <li class="ct-docs-nav-sidenav-active">
+                                    <a href="../../documentation/getting-started/overview.html">
+                                        Overview
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/getting-started/license.html">
+                                        License
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/getting-started/installation.html">
+                                        Installation
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/getting-started/build-tools.html">
+                                        Build Tools
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/getting-started/bootstrap.html">
+                                        What is Bootstrap
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ct-docs-toc-item-active">
+                            <a class="ct-docs-toc-link" href="javascript:void(0)">
+                                <div class="d-inline-block">
+                                    <div class="
+                                            icon icon-xs
+                                            border-radius-md
+                                            bg-gradient-warning
+                                            text-center
+                                            mr-2
+                                            d-flex
+                                            align-items-center
+                                            justify-content-center
+                                            me-1
+                                        ">
+                                        <i class="ni ni-folder-17 text-white"></i>
+                                    </div>
+                                </div>
+                                Laravel
+                            </a>
+                            <ul class="ct-docs-nav-sidenav ms-4 ps-1">
+                                <li class="">
+                                    <a href="../../documentation/laravel/login.html">
+                                        Login
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/laravel/sign-up.html">
+                                        Sign Up
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/laravel/forgot-password.html">
+                                        Forgot Password
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/laravel/reset-password.html">
+                                        Reset Password
+                                    </a>
+                                </li>
+                                <li class="">
+                                  <a href="../../documentation/laravel/user-profile.html">
+                                  User Profile
+                                  </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ct-docs-toc-item-active">
+                            <a class="ct-docs-toc-link" href="javascript:void(0)">
+                                <div class="d-inline-block">
+                                    <div class="
+                                            icon icon-xs
+                                            border-radius-md
+                                            bg-gradient-warning
+                                            text-center
+                                            mr-2
+                                            d-flex
+                                            align-items-center
+                                            justify-content-center
+                                            me-1
+                                        ">
+                                        <i class="ni ni-folder-17 text-white"></i>
+                                    </div>
+                                </div>
+                                Foundation
+                            </a>
+                            <ul class="ct-docs-nav-sidenav ms-4 ps-1">
+                                <li class="">
+                                    <a href="../../documentation/foundation/colors.html">
+                                        Colors
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/foundation/grid.html">
+                                        Grid
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/foundation/typography.html">
+                                        Typography
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/foundation/icons.html">
+                                        Icons
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/foundation/utilities.html">
+                                        Utilities
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ct-docs-toc-item-active">
+                            <a class="ct-docs-toc-link" href="javascript:void(0)">
+                                <div class="d-inline-block">
+                                    <div class="
+                                            icon icon-xs
+                                            border-radius-md
+                                            bg-gradient-warning
+                                            text-center
+                                            mr-2
+                                            d-flex
+                                            align-items-center
+                                            justify-content-center
+                                            me-1
+                                        ">
+                                        <i class="ni ni-app text-white"></i>
+                                    </div>
+                                </div>
+                                Components
+                            </a>
+                            <ul class="ct-docs-nav-sidenav ms-4 ps-1">
+                                <li class="">
+                                    <a href="../../documentation/components/alerts.html">
+                                        Alerts
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/badge.html">
+                                        Badge
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/buttons.html">
+                                        Buttons
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/social-buttons.html">
+                                        Social Buttons
+                                        <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/cards.html">
+                                        Cards
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/carousel.html">
+                                        Carousel
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/collapse.html">
+                                        Collapse
+                                        <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/dropdowns.html">
+                                        Dropdowns
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/forms.html">
+                                        Forms
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/input-group.html">
+                                        Input Group
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/list-group.html">
+                                        List Group
+                                        <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/modal.html">
+                                        Modal
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/navs.html">
+                                        Navs
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/navbar.html">
+                                        Navbar
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/pagination.html">
+                                        Pagination
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/popovers.html">
+                                        Popovers
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/progress.html">
+                                        Progress
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/spinners.html">
+                                        Spinners
+                                        <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/tables.html">
+                                        Tables
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="../../documentation/components/tooltips.html">
+                                        Tooltips
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ct-docs-toc-item-active">
+                            <a class="ct-docs-toc-link" href="javascript:void(0)">
+                                <div class="d-inline-block">
+                                    <div class="
+                                            icon icon-xs
+                                            border-radius-md
+                                            bg-gradient-warning
+                                            text-center
+                                            mr-2
+                                            d-flex
+                                            align-items-center
+                                            justify-content-center
+                                            me-1
+                                        ">
+                                        <i class="ni ni-settings text-white"></i>
+                                    </div>
+                                </div>
+                                Plugins
+                            </a>
+                            <ul class="ct-docs-nav-sidenav ms-4 ps-1">
+                            <li class="">
+                                <a href="../../documentation/plugins/countUpJs.html">
+                                CountUp JS
+                                <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="../../documentation/plugins/charts.html">
+                                Charts
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="../../documentation/plugins/datepicker.html">
+                                Datepicker
+                                <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="../../documentation/plugins/fullcalendar.html">
+                                Fullcalendar
+                                <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="../../documentation/plugins/sliders.html">
+                                Sliders
+                                <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="../../documentation/plugins/choices.html">
+                                Choices
+                                <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="../../documentation/plugins/dropzone.html">
+                                Dropzone
+                                <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="../../documentation/plugins/datatables.html">
+                                Datatables
+                                <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="../../documentation/plugins/kanban.html">
+                                Kanban
+                                <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="../../documentation/plugins/photo-swipe.html">
+                                Photo Swipe
+                                <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="../../documentation/plugins/quill.html">
+                                Quill
+                                <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="../../documentation/plugins/sweet-alerts.html">
+                                Sweet Alerts
+                                <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="../../documentation/plugins/threeJs.html">
+                                  Three JS
+                                  <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="../../documentation/plugins/wizard.html">
+                                Wizard
+                                <span class="ct-docs-sidenav-pro-badge">Pro</span>
+                                </a>
+                            </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            <div class="ct-docs-toc-col">
+              <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#usage">Usage</a>
+                  <ul>
+                    <li class="toc-entry toc-h3"><a href="#globe-example">Globe example</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <main class="ct-docs-content-col" role="main">
+              <div class="ct-docs-page-title">
+                <h1 class="ct-docs-page-h1-title" id="content">
+                  Bootstrap Three JS
+                </h1>
+                <span class="ct-docs-page-title-pro-line"> - </span>
+                <div class="ct-docs-page-title-pro-bage">Pro Component</div>
+                <div class="avatar-group mt-3">
+                </div>
+              </div>
+              <p class="ct-docs-page-title-lead">JavaScript 3D library - The aim of the project is to create an easy to use, lightweight, cross-browser, general purpose 3D library</p>
+              <hr class="ct-docs-hr">
+              <h2 id="usage">Usage</h2>
+              <h3 id="globe-example">Globe example</h3>
+              <div id="globe" class="peekaboo">
+                <canvas width="836" height="641" class="w-lg-100 h-lg-100 w-75 h-75 me-lg-0 me-n10 mt-lg-5" style="width: 836.484px; height: 641.125px;"></canvas>
+              </div>
+              <div class="position-relative">
+                <div class="bd-clipboard"><span class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard">Copy</span></div><figure class="highlight"><pre class=" language-html"><code class=" language-html" data-lang="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>globe<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>position-absolute end-0 top-10 mt-sm-3 mt-7 me-lg-7<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>canvas</span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>500px<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>350px<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>w-lg-100 h-lg-100 w-75 h-75 me-lg-0 me-n10 mt-lg-5<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>canvas</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+                </figure>
+              </div>
+              <p>In order to use this plugin on your page you will need to include the following script in the “Optional JS” area from the page’s footer:</p>
+              <div class="position-relative">
+                <div class="bd-clipboard"><span class="btn-clipboard" title="" data-bs-original-title="Copy to clipboard">Copy</span></div><figure class="highlight"><pre class=" language-html"><code class=" language-html" data-lang="html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../../assets/js/plugins/threejs.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../../assets/js/plugins/orbit-controls.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+                </figure>
+              </div>
+            </main>
+          </div>
+          <div class="ct-docs-main-footer-row">
+            <div class="ct-docs-main-footer-blank-col">
+            </div>
+            <div class="ct-docs-main-footer-col">
+              <footer class="ct-docs-footer">
+                <div class="ct-docs-footer-inner-row">
+                    <div class="ct-docs-footer-col">
+                        <div class="ct-docs-footer-copyright">
+                            ©
+                            <script>
+                                document.write(
+                                    new Date().getFullYear()
+                                );
+                            </script>2021
+                            <a href="https://creative-tim.com" class="ct-docs-footer-copyright-author" target="_blank">Creative Tim</a>
+                            &amp;
+                            <a href="https://updivision.com" class="ct-docs-footer-copyright-author" target="_blank">UPDIVISION</a>
+                        </div>
+                    </div>
+                    <div class="ct-docs-footer-col">
+                        <ul class="ct-docs-footer-nav-footer">
+                            <li>
+                                <a href="https://creative-tim.com" class="ct-docs-footer-nav-link" target="_blank">Creative Tim</a>
+                            </li>
+                            <li>
+                                <a href="https://updivision.com" class="ct-docs-footer-nav-link" target="_blank">UPDIVISION</a>
+                            </li>
+                            <li>
+                                <a href="https://www.creative-tim.com/contact-us" class="ct-docs-footer-nav-link" target="_blank">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="https://creative-tim.com/blog" class="ct-docs-footer-nav-link" target="_blank">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+            </div>
+          </div>
+        </div>
+        <script src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/js/core/popper.min.js" type="text/javascript"></script>
+        <script src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+
+        <script src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/js/plugins/moment.min.js" type="text/javascript"></script>
+        <script src="https://demos.creative-tim.com/soft-ui-dashboard-pro/assets/js/plugins/threejs.js" type="text/javascript"></script>
+        <script src="https://demos.creative-tim.com/soft-ui-dashboard-pro/assets/js/plugins/orbit-controls.js" type="text/javascript"></script>
+        <script src="https://demos.creative-tim.com/argon-design-system-pro/assets/demo/docs.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          (function() {
+            const container = document.getElementById("globe");
+            const canvas = container.getElementsByTagName("canvas")[0];
+
+            const globeRadius = 100;
+            const globeWidth = 4098 / 2;
+            const globeHeight = 1968 / 2;
+
+            function convertFlatCoordsToSphereCoords(x, y) {
+              let latitude = ((x - globeWidth) / globeWidth) * -180;
+              let longitude = ((y - globeHeight) / globeHeight) * -90;
+              latitude = (latitude * Math.PI) / 180;
+              longitude = (longitude * Math.PI) / 180;
+              const radius = Math.cos(longitude) * globeRadius;
+
+              return {
+                x: Math.cos(latitude) * radius,
+                y: Math.sin(longitude) * globeRadius,
+                z: Math.sin(latitude) * radius
+              };
+            }
+
+            function makeMagic(points) {
+              const {
+                width,
+                height
+              } = container.getBoundingClientRect();
+
+              // 1. Setup scene
+              const scene = new THREE.Scene();
+              // 2. Setup camera
+              const camera = new THREE.PerspectiveCamera(45, width / height);
+              // 3. Setup renderer
+              const renderer = new THREE.WebGLRenderer({
+                canvas,
+                antialias: true
+              });
+              renderer.setSize(width, height);
+              // 4. Add points to canvas
+              // - Single geometry to contain all points.
+              const mergedGeometry = new THREE.Geometry();
+              // - Material that the dots will be made of.
+              const pointGeometry = new THREE.SphereGeometry(0.5, 1, 1);
+              const pointMaterial = new THREE.MeshBasicMaterial({
+                color: "#989db5",
+              });
+
+              for (let point of points) {
+                const {
+                  x,
+                  y,
+                  z
+                } = convertFlatCoordsToSphereCoords(
+                  point.x,
+                  point.y,
+                  width,
+                  height
+                );
+
+                if (x && y && z) {
+                  pointGeometry.translate(x, y, z);
+                  mergedGeometry.merge(pointGeometry);
+                  pointGeometry.translate(-x, -y, -z);
+                }
+              }
+
+              const globeShape = new THREE.Mesh(mergedGeometry, pointMaterial);
+              scene.add(globeShape);
+
+              container.classList.add("peekaboo");
+
+              // Setup orbital controls
+              camera.orbitControls = new THREE.OrbitControls(camera, canvas);
+              camera.orbitControls.enableKeys = false;
+              camera.orbitControls.enablePan = false;
+              camera.orbitControls.enableZoom = false;
+              camera.orbitControls.enableDamping = false;
+              camera.orbitControls.enableRotate = true;
+              camera.orbitControls.autoRotate = true;
+              camera.position.z = -265;
+
+              function animate() {
+                // orbitControls.autoRotate is enabled so orbitControls.update
+                // must be called inside animation loop.
+                camera.orbitControls.update();
+                requestAnimationFrame(animate);
+                renderer.render(scene, camera);
+              }
+              animate();
+            }
+
+            function hasWebGL() {
+              const gl =
+                canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+              if (gl && gl instanceof WebGLRenderingContext) {
+                return true;
+              } else {
+                return false;
+              }
+            }
+
+            function init() {
+              if (hasWebGL()) {
+                window
+                window.fetch("https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-dashboard-pro/assets/js/points.json")
+                  .then(response => response.json())
+                  .then(data => {
+                    makeMagic(data.points);
+                  });
+              }
+            }
+            init();
+          })();
+        </script>
+        <script src="https://demos.creative-tim.com/test/soft-ui-dashboard-pro/assets/js/soft-ui-dashboard.min.js?v=1.0.0" type="text/javascript"></script>
+        <script>
+          Holder.addTheme('gray', {
+            bg: '#777',
+            fg: 'rgba(255,255,255,.75)',
+            font: 'Helvetica',
+            fontweight: 'normal'
+          })
+        </script>
+        <script>
+          // Facebook Pixel Code Don't Delete
+          ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+              n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+          }(window,
+            document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+          try {
+            fbq('init', '111649226022273');
+            fbq('track', "PageView");
+
+          } catch (err) {
+            console.log('Facebook Track Error:', err);
+          }
+        </script>
+        <script src="../../assets/docs.js"></script>
+
+
+
+    <style>
+      #ofBar {
+        background: #fff;
+        z-index: 999999999;
+        font-size: 16px;
+        color: #333;
+        padding: 16px 40px;
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 40px;
+        width: 80%;
+        border-radius: 8px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 13px 27px -5px rgba(50,50,93,0.25), 0 8px 16px -8px rgba(0,0,0,0.3), 0 -6px 16px -6px rgba(0,0,0,0.025);
+      }
+
+      #ofBar-logo img {
+        height: 50px;
+      }
+
+      #ofBar-content {
+        display: inline;
+        padding: 0 15px;
+      }
+
+      #ofBar-right {
+        display: flex;
+        align-items: center;
+      }
+
+      #ofBar b {
+        font-size: 15px !important;
+      }
+      #count-down {
+        display: initial;
+        padding-left: 10px;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      #close-bar {
+        font-size: 17px;
+        opacity: 0.5;
+        cursor: pointer;
+      }
+      #close-bar:hover{
+        opacity: 1;
+      }
+      #btn-bar {
+        background-image: linear-gradient(310deg, #141727 0%, #3A416F 100%);
+        color: #fff;
+        border-radius: 4px;
+        padding: 10px 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 12px;
+        opacity: .95;
+        margin-right: 20px;
+        box-shadow: 0 5px 10px -3px rgba(0,0,0,.23), 0 6px 10px -5px rgba(0,0,0,.25);
+      }
+       #btn-bar, #btn-bar:hover, #btn-bar:focus, #btn-bar:active {
+         text-decoration: none !important;
+         color: #fff !important;
+     }
+      #btn-bar:hover{
+        opacity: 1;
+      }
+
+      #btn-bar span, #ofBar-content span {
+        color: red;
+        font-weight: 700;
+      }
+
+      #oldPriceBar {
+        text-decoration: line-through;
+        font-size: 16px;
+        color: #fff;
+        font-weight: 400;
+        top: 2px;
+        position: relative;
+      }
+      #newPrice{
+        color: #fff;
+        font-size: 19px;
+        font-weight: 700;
+        top: 2px;
+        position: relative;
+        margin-left: 7px;
+      }
+
+      #fromText {
+        font-size: 15px;
+        color: #fff;
+        font-weight: 400;
+        margin-right: 3px;
+        top: 0px;
+        position: relative;
+      }
+
+      @media(max-width: 991px){
+
+      }
+      @media (max-width: 768px) {
+        #count-down {
+          display: block;
+          margin-top: 15px;
+        }
+
+        #ofBar {
+          flex-direction: column;
+          align-items: normal;
+        }
+
+        #ofBar-content {
+          margin: 15px 0;
+          text-align: center;
+          font-size: 18px;
+        }
+
+        #ofBar-right {
+          justify-content: flex-end;
+        }
+      }
+    </style>
+
+</body>
+    </html>
