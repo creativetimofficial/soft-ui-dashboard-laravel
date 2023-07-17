@@ -10,12 +10,12 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "axios": "^0.21",
+        "axios": "^0.21.4",
         "laravel-mix": "^6.0.6",
-        "lodash": "^4.17.19",
-        "postcss": "^8.1.14",
+        "lodash": "^4.17.21",
+        "postcss": "^8.4.26",
         "resolve-url-loader": "^4.0.0",
-        "sass": "^1.43.4",
-        "sass-loader": "^12.3.0"
+        "sass": "^1.63.6",
+        "sass-loader": "^12.6.0"
     }
 }
