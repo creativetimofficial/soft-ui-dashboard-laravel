@@ -1,5 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/assets/css/soft-ui-dashboard.css": "/assets/css/soft-ui-dashboard.css"
+    "/assets/css/soft-ui-dashboard.css": "/assets/css/soft-ui-dashboard.css",
+    "/assets/js/soft-ui-dashboard.min.js": "/assets/js/soft-ui-dashboard.min.js"
 }
