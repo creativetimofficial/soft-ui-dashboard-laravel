@@ -13,6 +13,8 @@ class SocialiteController extends Controller
 {
     public function loginSocial(string $provider): RedirectResponse
     {
+
+        dd($provider);
         return Socialite::driver($provider)->redirect();
     }
 
