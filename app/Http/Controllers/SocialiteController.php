@@ -13,13 +13,12 @@ class SocialiteController extends Controller
 {
     public function loginSocial(string $provider): RedirectResponse
     {
-
-        dd($provider);
-        return Socialite::driver($provider)->redirect();
+       
+           return Socialite::driver($provider)->redirect();
     }
 
 
-    public function callbackSocial(Request $request, string $provider)
+    public function callbackSocial(string $provider):RedirectResponse
     {
         
         $response = Socialite::driver($provider)->user();

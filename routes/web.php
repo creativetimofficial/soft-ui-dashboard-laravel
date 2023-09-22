@@ -91,5 +91,5 @@ Route::get('/login', function () {
 Route::get('/redirect/{provider}', [SocialiteController::class, 'loginSocial'])
 	->name('socialite.login');
 
-Route::get('/callback/{provider}', [SocialiteController::class, 'callbackSocial'])
-	->name('socialite.callback');
+Route::get('/callback/{provider}', [SocialiteController::class, 'callbackSocial']);
+	
