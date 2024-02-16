@@ -16,6 +16,15 @@ class InfoUserController extends Controller
         return view('laravel-examples/user-profile');
     }
 
+    public function view()
+    {
+        $users = User::orderBy('created_at', 'asc')->get();
+
+        return view('laravel-examples/user-management', [
+            'users' => $users
+        ]);
+    }
+
     public function store(Request $request)
     {
 
